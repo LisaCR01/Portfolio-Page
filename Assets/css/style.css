@@ -1,0 +1,155 @@
+/*CSS variables at the root of the document to be used throughout the style sheet */
+:root {
+  --light-purple:lavender;
+  --dark-purple:rgb(38, 22, 50);
+  --light-green:rgb(201, 253, 223);
+  --dark-green:rgb(10, 44, 15);
+  --light-blue:rgb(194, 229, 251);
+  --dark-blue:rgb(12, 12, 64);
+}
+
+/* Universal selector */
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Element Selectors */
+body {
+  overflow: scroll;
+  background-color: rgb(143, 143, 197)
+}
+
+header, .information {
+  padding: 10px;
+  text-align: center;
+  background-color: var(--dark-purple);
+  color:var(--light-purple)}
+
+h1 {
+  display: inline-block;
+  font-size: 48px
+}
+
+nav,.Contact_Info {
+  display: inline-flexbox;
+  padding: 10px;
+  background-color:var(--light-purple);
+  text-align: center;
+}
+
+
+nav a,footer a  {
+  color:var(--dark-purple);
+  text-decoration: none
+}
+
+li {
+  display: inline-block
+}
+
+figure img {
+  width: 50%;
+  display: block;
+  border: 5px solid var(--dark-purple);
+  margin-left: auto;
+  margin-right: auto
+}
+
+p {
+  background-color: var(--light-purple);
+  padding: 10px;
+  font-size: 20px
+
+}
+
+/* Class selector */
+.row{
+  flex: 4;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center
+}
+
+.column{
+  box-sizing:border-box;
+  flex: 22%;
+  flex-wrap: wrap;
+  border: 5px solid var(--dark-purple);
+  margin-left: 5px;margin-right: 5px;
+  margin-top: 5px
+}
+
+.larger_image{
+  width: 100%;
+  display: block;
+  border: 5px solid var(--dark-purple);
+  margin-left: auto;
+  margin-right: auto
+}
+
+/* Cards are split into two columns at 900px or smaller */
+@media screen and (max-width: 900px){
+  body{
+    background-color:  rgb(114, 217, 159)
+  }
+  header,.information,h1{
+    color: var(--light-green) ;
+    background-color: var(--dark-green)
+  }
+  figure img,.column, .larger_image{
+    border:5px solid var(--dark-green)
+  }
+  figure img {
+    width: 100%
+  }
+  nav,nav a,.Contact_Info,.Contact_Info a,p{
+    color:var(--dark-green);
+    background-color:var(--light-green)
+  }
+  .column{
+    flex: 48%
+  }
+  p{
+    font-size: 16px
+  }
+  h1{
+    font-size: 28px
+  }
+  nav a,.Contact_Info a {
+    font-size: 18px;
+  }
+}
+
+/* Cards are stacked on top of each other at 600px or smaller */
+@media screen and (max-width: 600px){
+  body{
+    background-color: rgb(114, 157, 217)
+  }
+  header,.information,h1{
+    color: var(--light-blue);
+    background-color: var(--dark-blue)
+  }
+  figure img, .column, .larger_image{
+    border:5px solid var(--dark-blue)
+  }
+  figure img {
+    width: 100%
+  }
+  nav,nav a,.Contact_Info,.Contact_Info a,p{
+    color:var(--dark-blue);
+    background-color:var(--light-blue) 
+  }
+  .column{
+    flex: 100%
+  }
+  p{
+    font-size: 16px
+  }
+  h1{
+    font-size: 28px
+  }
+  nav a,.Contact_Info a {
+    font-size: 18px;
+  }
+}
