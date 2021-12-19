@@ -13,6 +13,6 @@ In this project I created my own portfolio page from scratch. The purposes of th
 
 ## Deployed Application 
 
-![Deployed Application](Deployed-Application.png)
+![Deployed Application](./Deployed-Application.png?raw=true)
 
 [Link to Deployed Application](https://)
